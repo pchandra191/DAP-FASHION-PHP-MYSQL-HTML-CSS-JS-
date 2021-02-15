@@ -1,0 +1,103 @@
+body {
+		background: #151515;
+	}
+	.container {
+	  	width: 800px;
+	  	height: auto;
+		margin: 0 auto;
+	 }
+	.filterblock {
+		display: inline;
+		margin-right: 15px;
+	}
+	#filters {	
+        text-align: center;
+  		background: #0081dc;
+  		padding: 10px;
+  		border-radius: 3px 3px 0 0;
+	}
+	.resultblock {
+		width: 100%;
+		height: auto;
+		background: #a8dbff;
+		margin-top: 15px;
+		font-family: 'Droid Sans', sans-serif;
+	}
+	.itemimg {
+		width: 150px;
+		height:150px;
+		background: #ccc;
+	}
+ 
+	.desc {
+		width: 650px;
+		height: auto;
+		display: inline-block;
+		float: right;
+	}
+ 
+	.desc_text {
+		padding: 10px;
+	}
+ 
+	label {
+	    display: inline-block;
+	    cursor: pointer;
+	    position: relative;
+	    padding-left: 25px;
+	    margin-right: 15px;
+	    font-size: 13px;
+	    margin-bottom: 10px;
+	    color: #FFF;
+	    font-family: 'Tahoma'
+	}
+ 
+	label:before {
+	    content:"";
+	    display: inline-block;
+	    width: 16px;
+	    height: 16px;
+	    margin-right: 10px;
+	    position: absolute;
+	    left: 0;
+	    bottom: 1px;
+	    background-color: #bedbef;
+	    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+	    border-radius: 3px;
+	}
+	input[type=checkbox] {
+	    display: none;
+	}
+	input[type=checkbox]:checked + label:before {
+	    content:"\2713";
+	    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	    font-size: 15px;
+	    color: #FFF;
+	    text-align: center;
+	    line-height: 15px;
+	}
+ 
+ 
+        
+     
+     footer {
+		width: 786px;
+		font: normal 16px Arial, Helvetica, sans-serif;
+		padding: 15px 35px;
+		position: fixed;
+		bottom: 0;
+		left: 50%;
+		margin-left: -420px;
+		background-color: #1f1f1f;
+		background-image: -webkit-linear-gradient(top, #1f1f1f, #101010);
+		background-image: -moz-linear-gradient(top, #1f1f1f, #101010);
+		background-image: linear-gradient(top, #1f1f1f, #101010);
+		border-radius: 2px 2px 0 0;
+		box-shadow: 0 -1px 4px rgba(0,0,0,0.4);
+		z-index: 1;
+		text-align: center;
+	}
+ 
+	a {
+		color: #FFFFFF;
+	}

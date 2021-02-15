@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Live Filter With Multiple Options Using JQuery | lisenme</title>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.category').on('change', function(){
+      var category_list = [];
+      $('#filters :input:checked').each(function(){
+        var category = $(this).val();
+        category_list.push(category);
+      });
+ 
+      if(category_list.length == 0)
+        $('.resultblock').fadeIn();
+      else {
+        $('.resultblock').each(function(){
+          var item = $(this).attr('data-tag');
+          if(jQuery.inArray(item,category_list) > -1)
+            $(this).fadeIn('slow');
+          else
+            $(this).hide();
+        });
+      }   
+    });
+  }); 
+  </script>
+</head>
+<body>
+ <div class="container">
+    
+ 	<div id="filters">
+         <div style="text-align: center; padding-bottom: 10px; font-size: 32px; color: #abcdff;">
+	 		<a href="www.lisenme.com" style="text-decoration: none;">Lisenme.com</a>  
+	 	</div>
+ 		<div class="filterblock">
+	 		  <input id="check1" type="checkbox" name="check" value="php" class="category">
+    		<label for="check1">PHP</label>
+	 	</div>
+ 
+ 		<div class="filterblock">
+	 		  <input id="check2" type="checkbox" name="check" value="html" class="category">
+    		<label for="check2">HTML</label>
+	 	</div>
+ 
+	 	<div class="filterblock">
+	 		  <input id="check3" type="checkbox" name="check" value="css" class="category">
+    		<label for="check3">CSS</label>
+	 	</div>
+ 	</div>
+	
+ 	<div class="searchresults">
+ 		
+ 
+ 		<div class="resultblock" data-tag="css">
+ 			 				
+ 			<div class="desc">
+ 				<div class="desc_text">
+ 					Cascading Style Sheets (CSS) are a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects like SVG or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+ 				</div>
+ 			</div>
+ 		</div>
+ 
+ 		<div class="resultblock" data-tag="html">
+ 							
+ 			<div class="desc">
+ 				<div class="desc_text">
+ 					HTML is the standard markup language for creating Web pages. HTML stands for Hyper Text Markup Language HTML describes the structure of Web pages using markup HTML elements are the building blocks of HTML pages HTML elements are represented by tags HTML tags label pieces of content such as "heading", "paragraph", "table", and so on Browsers do not display the HTML tags, but use them to render the content of the page
+ 				</div>
+ 			</div>
+ 		</div> 
+		
+		<div class="resultblock" data-tag="html">
+ 		 				
+ 			<div class="desc">
+ 				<div class="desc_text">
+ 					HTML is the standard markup language for creating Web pages. HTML stands for Hyper Text Markup Language HTML describes the structure of Web pages using markup HTML elements are the building blocks of HTML pages HTML elements are represented by tags HTML tags label pieces of content such as "heading", "paragraph", "table", and so on Browsers do not display the HTML tags, but use them to render the content of the page
+
+ 				</div>
+ 			</div>
+ 		</div>
+ 	
+ 				
+ 
+ 	</div>
+ </div>
+		<footer>
+            <a  href="https://www.youtube.com/channel/UCEdC6Qk_DZ9fX_gUYFJ1tsA">Subscribe our youtube channel to get more </a>
+		</footer>
+</body>
+</html>
