@@ -6,7 +6,7 @@ MADE ON PHP/MYSQL/JAVASCRIP/CSS/HTML
 
 Install Xampp
 
-Add Folder to C:\xampp2\htdocs\
+Add Folder to C:\xampp\htdocs\
 
 Run Apache & SQL - from Xampp Control Panel
 
