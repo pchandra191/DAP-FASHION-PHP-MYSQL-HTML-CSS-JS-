@@ -6,11 +6,7 @@ session_start();
 
 	
 	
-		//GENERATE ORDERS' NUMBER, 01-04-2018, Prabhat Chandra
-				$characters = array_merge(range('0','999999'));
-				for ($i = 0; $i < 12; $i++) {
-					$rand = rand(0, count($characters)-1);	
-				}
+		
 	//			echo $start;
 			
 
@@ -38,9 +34,13 @@ session_start();
 	
 		//echo $product_id = $_POST['product_id'];
 	
-	
+	//GENERATE ORDERS' NUMBER, 01-04-2018, Prabhat Chandra
+				$characters = array_merge(range('0','999999'));
+				
+					$rand = rand(0, count($characters)-1);	
+				$id = 0;
 		
-		$conn->query("INSERT INTO `u_orders` VALUES( $id2, '$u_name',  $qty2, '$a_id', $u_price, '$date', $rand, $donezo )") or die(mysqli_error($conn));
+		$conn->query("INSERT INTO `u_orders` VALUES( $id ,$id2, '$u_name',  $qty2, '$a_id', $u_price, '$date', $rand, $donezo )") or die(mysqli_error($conn));
 															}
 	
 	//$conn->query("UPDATE `u_cart` SET `u_name` = '$u_name', `u_qty` = $qty , `u_price` = $price  
@@ -75,7 +75,7 @@ session_start();
 								or die(mysqli_error($conn));
 										
 										}
-	}
+		}
 	}
 
 		header('Location: payment.php?order_q_id='.$rand);
