@@ -10,6 +10,8 @@ Add Folder to C:\xampp\htdocs\
 
 Run Apache & SQL - from Xampp Control Panel
 
+Import SQL file in phpmyadmin. And create DATABASE
+
 Browse on Browser
 
 
